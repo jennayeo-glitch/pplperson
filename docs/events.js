@@ -87,7 +87,7 @@ const eventsData = [
         location: '용산구',
         image: 'img/event/jenna/20211029_halloween.JPG',
         alt: 'Halloween Party',
-        capacity: { current: 6, total: 6 },
+        capacity: { current: 8, total: 8 },
         status: 'Sold Out',
         category: 'private party'
     }
