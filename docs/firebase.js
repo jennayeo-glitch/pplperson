@@ -78,7 +78,7 @@ const EventParticipants = {
                 id: user.id,
                 nickname: user.nickname,
                 profile_image: user.profile_image || '',
-                timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                timestamp: new Date().toISOString() // Use ISO string instead of serverTimestamp in array
             });
 
             await eventRef.set({
