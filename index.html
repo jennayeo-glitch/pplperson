@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ppl person</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Kakao SDK -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="img/logo/ppl_person_logo.png" alt="ppl person" class="logo-image">
+            </div>
+            <nav class="header-nav">
+                <a href="#" class="nav-link">서비스</a>
+                <!-- <a href="#" class="nav-link active">회사정보</a> -->
+                <a href="#" class="nav-link">마이페이지</a>
+                <a href="#" class="nav-link">문의하기</a>
+                <div class="auth-section">
+                    <button id="kakao-login-btn" class="nav-link kakao-login-btn">kakao login</button>
+                    <div id="user-info" class="user-info" style="display: none;">
+                        <span id="user-name" class="user-name"></span>
+                        <button id="logout-btn" class="nav-link logout-btn">로그아웃</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="content-wrapper">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <a href="#" class="sidebar-link">socializing</a>
+                    <a href="#" class="sidebar-link">private party</a>
+                    <a href="#" class="sidebar-link active sidebar-link-all">all</a>
+                    <a href="#" class="sidebar-link">self-development</a>
+                    <a href="#" class="sidebar-link">regular gathering</a>
+                </nav>
+            </aside>
+
+            <section class="main-content">
+                <div class="events-grid" id="events-grid">
+                    <!-- Events will be dynamically rendered here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <button class="top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">TOP</button>
+
+    <script src="events.js"></script>
+    <script src="auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

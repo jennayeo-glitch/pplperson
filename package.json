@@ -1,0 +1,18 @@
+{
+  "name": "ppl_person",
+  "version": "1.0.0",
+  "description": "파티플래너 랜딩페이지",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["party", "planner", "landing-page"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
+
