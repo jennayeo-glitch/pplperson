@@ -57,7 +57,7 @@ function renderEvents(filterCategory = 'all') {
 
         // Add click event to navigate to detail page
         eventCard.addEventListener('click', function() {
-            // Only allow navigation for event id 1 (여정's 생월파티)
+            // Only allow navigation for event id 1 (여졍's 생월파티)
             if (event.id === 1) {
                 window.location.href = `event-detail.html?id=${event.id}`;
             } else {

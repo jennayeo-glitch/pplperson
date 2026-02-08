@@ -42,7 +42,7 @@ const eventsData = [
         location: '송파구',
         image: 'img/event/chaejae/250830_jaespecialnight25.png',
         alt: 'Jae Special Night 25',
-        capacity: { current: 18, total: 25 },
+        capacity: { current: 50, total: 50 },
         status: 'Sold Out',
         category: 'private party'
     },
@@ -64,7 +64,7 @@ const eventsData = [
         location: '강남구',
         image: 'img/event/chaejae/240730_jaespecialnight24.png',
         alt: 'Jae Special Night 24',
-        capacity: { current: 18, total: 25 },
+        capacity: { current: 40, total: 40 },
         status: 'Sold Out',
         category: 'private party'
     },
@@ -76,6 +76,17 @@ const eventsData = [
         image: 'img/event/jenna/221029_tot22.png',
         alt: 'Event TOT 22',
         capacity: { current: 60, total: 60 },
+        status: 'Sold Out',
+        category: 'private party'
+    },
+    {
+        id: 7,
+        date: '2021-10-29',
+        displayDate: '2021.10.29',
+        location: '용산구',
+        image: 'img/event/jenna/20211029_halloween.JPG',
+        alt: 'Halloween Party',
+        capacity: { current: 6, total: 6 },
         status: 'Sold Out',
         category: 'private party'
     }
