@@ -320,13 +320,28 @@
                 const eventTitle = event.title || event.alt;
                 const description = event.description || '이 이벤트에 대한 상세한 설명이 여기에 표시됩니다.';
                 
-                // 줄바꿈 처리
-                const descriptionLines = description.split('\n').map(line => `<p>${line}</p>`).join('');
-                
-                descriptionSection.innerHTML = `
-                    <h2>${eventTitle}</h2>
-                    ${descriptionLines}
-                `;
+                // 여졍's 생월파티 (id: 1)인 경우 특별 처리
+                if (event.id === 1) {
+                    const descriptionLines = description.split('\n');
+                    const firstLine = '올래말래??';
+                    const remainingLines = descriptionLines.slice(1);
+                    
+                    descriptionSection.innerHTML = `
+                        <h2>${eventTitle}</h2>
+                        <p>${firstLine}</p>
+                        <div class="description-more-content" style="display: none;">
+                            ${remainingLines.map(line => `<p>${line}</p>`).join('')}
+                        </div>
+                        <button class="description-more-btn" onclick="toggleDescription()">더보기</button>
+                    `;
+                } else {
+                    // 다른 이벤트는 기존대로 표시
+                    const descriptionLines = description.split('\n').map(line => `<p>${line}</p>`).join('');
+                    descriptionSection.innerHTML = `
+                        <h2>${eventTitle}</h2>
+                        ${descriptionLines}
+                    `;
+                }
             }
 
             // Render schedule section
