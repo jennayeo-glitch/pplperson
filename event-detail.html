@@ -602,6 +602,22 @@
                 </div>
             `;
         }
+
+        // 더보기 버튼 토글 함수
+        function toggleDescription() {
+            const moreContent = document.querySelector('.description-more-content');
+            const moreBtn = document.querySelector('.description-more-btn');
+            
+            if (moreContent && moreBtn) {
+                if (moreContent.style.display === 'none') {
+                    moreContent.style.display = 'block';
+                    moreBtn.textContent = '접기';
+                } else {
+                    moreContent.style.display = 'none';
+                    moreBtn.textContent = '더보기';
+                }
+            }
+        }
     </script>
 </body>
 </html>
