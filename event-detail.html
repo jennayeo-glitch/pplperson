@@ -92,6 +92,16 @@
 
         .description-more-content {
             margin-top: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+            opacity: 0;
+        }
+
+        .description-more-content.show {
+            max-height: 1000px;
+            opacity: 1;
+            transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
         }
 
         .event-detail-schedule {
@@ -349,7 +359,7 @@
                     descriptionSection.innerHTML = `
                         <h2>${eventTitle}</h2>
                         <p>${firstLine}</p>
-                        <div class="description-more-content" style="display: none;">
+                        <div class="description-more-content">
                             ${remainingLines.map(line => `<p>${line}</p>`).join('')}
                         </div>
                         <button class="description-more-btn" onclick="toggleDescription()">더보기</button>
@@ -608,12 +618,12 @@
             const moreBtn = document.querySelector('.description-more-btn');
             
             if (moreContent && moreBtn) {
-                if (moreContent.style.display === 'none') {
-                    moreContent.style.display = 'block';
-                    moreBtn.textContent = '접기';
-                } else {
-                    moreContent.style.display = 'none';
+                if (moreContent.classList.contains('show')) {
+                    moreContent.classList.remove('show');
                     moreBtn.textContent = '더보기';
+                } else {
+                    moreContent.classList.add('show');
+                    moreBtn.textContent = '접기';
                 }
             }
         }
